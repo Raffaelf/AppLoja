@@ -1,14 +1,16 @@
-package com.example.raffael.apploja;
+package com.example.raffael.apploja.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.raffael.apploja.MainActivity;
+import com.example.raffael.apploja.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,11 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!emptyValidation()) {
-
-                }else{
-                    Toast.makeText(LoginActivity.this, "Campo Vazio!", Toast.LENGTH_SHORT).show();
-                }
+                Intent i = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(i);
             }
         });
 
